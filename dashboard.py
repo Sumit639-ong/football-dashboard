@@ -87,43 +87,42 @@ if page == "Home":
 
     for index, row in data.iterrows():
 
-        col1, col2, col3 = st.columns([1,4,1])
+    col1, col2, col3 = st.columns([1,4,1])
 
-        # Team 1 Logo
-        with col1:
-            logo1 = team_logos.get(row["team1"])
-            if logo1:
-                st.image(logo1, width=60)
+    with col1:
+        logo1 = team_logos.get(row["team1"])
+        if logo1:
+            st.image(logo1, width=60)
 
-        # Match Card
-        with col2:
+    with col2:
 
-            st.markdown(f"""
-            <div class="match-card">
+        st.markdown(f"""
+        <div class="match-card">
 
-            <div class="match-title">
-            {row['team1']} vs {row['team2']}
-            </div>
+        <div class="match-title">
+        {row['team1']} vs {row['team2']}
+        </div>
 
-            <div class="match-info">
-            📅 {row['match_date']} <br>
-            🏆 {row['league']}
-            </div>
+        <div class="match-info">
+        📅 {row['match_date']}
+        </div>
 
-            </div>
-            """, unsafe_allow_html=True)
+        <div class="match-info">
+        🏆 {row['league']}
+        </div>
 
-            if st.button("View Match", key=row["id"]):
-                st.session_state.selected_match = row["id"]
+        </div>
+        """, unsafe_allow_html=True)
 
-        # Team 2 Logo
-        with col3:
-            logo2 = team_logos.get(row["team2"])
-            if logo2:
-                st.image(logo2, width=60)
+        if st.button("View Match", key=row["id"]):
+            st.session_state.selected_match = row["id"]
 
-        st.divider()
+    with col3:
+        logo2 = team_logos.get(row["team2"])
+        if logo2:
+            st.image(logo2, width=60)
 
+    st.divider()
 # ---------------- EPL PAGE ----------------
 
 if page == "EPL":
