@@ -84,10 +84,10 @@ if page == "Home":
     st.title("⚽ Football Admin Dashboard")
 
     data = pd.read_sql("SELECT * FROM matches", conn)
-
+    
     for index, row in data.iterrows():
-
-    col1, col2, col3 = st.columns([1,4,1])
+        
+        col1, col2, col3 = st.columns([1,4,1])
 
     with col1:
         logo1 = team_logos.get(row["team1"])
