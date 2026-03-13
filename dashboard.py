@@ -188,20 +188,19 @@ if page == "CARGO CUP":
         
         col1, col2, col3 = st.columns([6,1,1])
 
-    with col1:
-        st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
-        st.write(f"📅 {row['match_date']}")
+        with col1:
+            st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
+            st.write(f"📅 {row['match_date']}")
 
-    with col2:
-        if st.button("✏️ Edit", key=f"edit_epl_{index}"):
-            st.write("Edit match:", row['team1'], "vs", row['team2'])
+        with col2:
+            if st.button("✏️ Edit", key=f"edit_cargo_{index}"):
+                st.write("Edit match:", row['team1'], "vs", row['team2'])
 
-    with col3:
-        if st.button("🗑 Delete", key=f"delete_epl_{index}"):
-            st.write("Delete match:", row['team1'], "vs", row['team2'])
+        with col3:
+            if st.button("🗑 Delete", key=f"delete_cargo_{index}"):
+                st.write("Delete match:", row['team1'], "vs", row['team2'])
 
-    st.divider()
-
+        st.divider()
 # ---------------- FA CUP PAGE --------------
 
 if page == "FA CUP":
@@ -214,19 +213,19 @@ if page == "FA CUP":
         
         col1, col2, col3 = st.columns([6,1,1])
 
-    with col1:
-        st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
-        st.write(f"📅 {row['match_date']}")
+        with col1:
+            st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
+            st.write(f"📅 {row['match_date']}")
 
-    with col2:
-        if st.button("✏️ Edit", key=f"edit_epl_{index}"):
-            st.write("Edit match:", row['team1'], "vs", row['team2'])
+        with col2:
+            if st.button("✏️ Edit", key=f"edit_cargo_{index}"):
+                st.write("Edit match:", row['team1'], "vs", row['team2'])
 
-    with col3:
-        if st.button("🗑 Delete", key=f"delete_epl_{index}"):
-            st.write("Delete match:", row['team1'], "vs", row['team2'])
-    st.divider()
+        with col3:
+            if st.button("🗑 Delete", key=f"delete_cargo_{index}"):
+                st.write("Delete match:", row['team1'], "vs", row['team2'])
 
+        st.divider()
 
 # ---------------- ADD MATCH ----------------
 
