@@ -131,10 +131,10 @@ if page == "EPL":
     st.title("🏆 EPL Matches")
 
     data = pd.read_sql("SELECT * FROM matches WHERE league='EPL'", conn)
-
-for index, row in data.iterrows():
-
-    col1, col2, col3 = st.columns([6,1,1])
+    
+    for index, row in data.iterrows():
+        
+        col1, col2, col3 = st.columns([6,1,1])
 
     with col1:
         st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
@@ -157,10 +157,10 @@ if page == "UCL":
     st.title("🏆 UCL Matches")
 
     data = pd.read_sql("SELECT * FROM matches WHERE league='UCL'", conn)
-
-for index, row in data.iterrows():
     
-    col1, col2, col3 = st.columns([6,1,1])
+    for index, row in data.iterrows():
+        
+        col1, col2, col3 = st.columns([6,1,1])
 
     with col1:
         st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
@@ -183,10 +183,10 @@ if page == "CARGO CUP":
     st.title("🏆 CARGO CUP Matches")
 
     data = pd.read_sql("SELECT * FROM matches WHERE league='CARGO CUP'", conn)
-
-for index, row in data.iterrows():
-
-    col1, col2, col3 = st.columns([6,1,1])
+    
+    for index, row in data.iterrows():
+        
+        col1, col2, col3 = st.columns([6,1,1])
 
     with col1:
         st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
@@ -209,10 +209,10 @@ if page == "FA CUP":
     st.title("🏆 FA CUP Matches")
 
     data = pd.read_sql("SELECT * FROM matches WHERE league='FA CUP'", conn)
-
-for index, row in data.iterrows():
-
-    col1, col2, col3 = st.columns([6,1,1])
+    
+    for index, row in data.iterrows():
+        
+        col1, col2, col3 = st.columns([6,1,1])
 
     with col1:
         st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
