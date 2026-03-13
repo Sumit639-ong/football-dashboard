@@ -123,11 +123,12 @@ if page == "Home":
             st.image(logo2, width=60)
 
     st.divider()
+    
 # ---------------- EPL PAGE ----------------
 
 if page == "EPL":
 
-    st.title("⚽ EPL Matches")
+    st.title("🏆 EPL Matches")
 
     data = pd.read_sql("SELECT * FROM matches WHERE league='EPL'", conn)
 
@@ -150,6 +151,35 @@ if page == "UCL":
         st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
         st.write(f"📅 {row['match_date']}")
         st.divider()
+
+# ---------------- CARGO CUP ----------------
+
+if page == "CARGO CUP":
+
+    st.title("🏆 CARGO CUP Matches")
+
+    data = pd.read_sql("SELECT * FROM matches WHERE league='CARGO CUP'", conn)
+
+    for index, row in data.iterrows():
+
+        st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
+        st.write(f"📅 {row['match_date']}")
+        st.divider()
+
+# ---------------- FA CUP PAGE --------------
+
+if page == "FA CUP":
+
+    st.title("🏆 FA CUP Matches")
+
+    data = pd.read_sql("SELECT * FROM matches WHERE league='FA CUP'", conn)
+
+    for index, row in data.iterrows():
+
+        st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
+        st.write(f"📅 {row['match_date']}")
+        st.divider()
+
 
 # ---------------- ADD MATCH ----------------
 
@@ -185,6 +215,7 @@ if page == "Settings":
 
     st.title("⚙ Admin Settings")
     st.write("Admin Settings Panel")
+    
 
 # ---------------- MATCH DETAIL PAGE ----------------
 
