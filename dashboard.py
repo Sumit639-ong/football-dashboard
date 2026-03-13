@@ -189,6 +189,7 @@ if page == "CARGO CUP":
         col1, col2, col3 = st.columns([6,1,1])
 
     with col1:
+        
         st.markdown(f"### {row['team1']} ⚽ {row['team2']}")
         st.write(f"📅 {row['match_date']}")
 
