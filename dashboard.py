@@ -132,7 +132,7 @@ if page == "EPL":
 
     data = pd.read_sql("SELECT * FROM matches WHERE league='EPL'", conn)
 
-    for index, row in data.iterrows():
+for index, row in data.iterrows():
 
     col1, col2, col3 = st.columns([6,1,1])
 
@@ -158,8 +158,8 @@ if page == "UCL":
 
     data = pd.read_sql("SELECT * FROM matches WHERE league='UCL'", conn)
 
-    for index, row in data.iterrows():
-
+for index, row in data.iterrows():
+    
     col1, col2, col3 = st.columns([6,1,1])
 
     with col1:
@@ -184,7 +184,7 @@ if page == "CARGO CUP":
 
     data = pd.read_sql("SELECT * FROM matches WHERE league='CARGO CUP'", conn)
 
-    for index, row in data.iterrows():
+for index, row in data.iterrows():
 
     col1, col2, col3 = st.columns([6,1,1])
 
@@ -210,7 +210,7 @@ if page == "FA CUP":
 
     data = pd.read_sql("SELECT * FROM matches WHERE league='FA CUP'", conn)
 
-    for index, row in data.iterrows():
+for index, row in data.iterrows():
 
     col1, col2, col3 = st.columns([6,1,1])
 
